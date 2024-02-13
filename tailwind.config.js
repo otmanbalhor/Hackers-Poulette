@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./Hackers-Poulette/**/*.{php}"
-],
+  content: ["./Hackers-Poulette/index.php"],
   theme: {
     extend: {},
   },
   plugins: [],
 }
+
