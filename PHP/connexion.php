@@ -4,7 +4,7 @@ $username = "root";
 $password = "";
 
 try{
-	$dsn="mysql:host=$servername;dbname=";
+	$dsn="mysql:host=$servername;dbname=hackers-poulette";
 	$bdd=new PDO( $dsn, $username, $password );
 	$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 }
