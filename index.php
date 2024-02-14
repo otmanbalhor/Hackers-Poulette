@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./src/output.css" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
     <title>Hackers Poulette</title>
 </head>
-<body>
-    <header class="flex justify-center">
-        <h1 class="text-3xl font-bold underline">Contact support</h1>
+<body class="bg-gray-200">
+    <header class="mb-10 w-full flex-col">
+        <nav class="bg-black w-full h-10 text-white flex justify-end px-2">
+            <a href="#">Accueil</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="flex justify-center">
+            <h1 class="text-3xl font-bold underline text-gray-800">Contact support</h1>
+        </div>
+            
     </header>
 
     <main class="flex justify-center" >
    
-        <form action="" method="post" enctype="multipart/form-data">
+        <form class="border-double border-4 border-gray-900 p-5" action="" method="post" enctype="multipart/form-data">
             <div>
                 <label for="name">Name:</label>
             </div>
@@ -50,7 +58,7 @@
                 <input type="text" placeholder="description" name="descri" required>
             </div>
             <div>
-                <button name="ok">Submit</button>
+                <button class="border border-4 border-gray-900 p-1" name="ok">Submit</button>
             </div>
         </form>
     </main>
