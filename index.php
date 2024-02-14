@@ -19,7 +19,7 @@
             
     </header>
 
-    <main class="flex justify-center" >
+    <main class="flex justify-center">
    
         <form class="border-double border-4 border-gray-900 p-5" action="" method="post" enctype="multipart/form-data">
             <div>
