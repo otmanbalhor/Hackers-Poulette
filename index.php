@@ -9,65 +9,72 @@
     <script src="JS/main.js"></script>
 </head>
 
-<body class="bg-gray-200">
+<body class="font-sans bg-gray-100">
     <header class="mb-10 w-full flex-col">
-        <nav class="bg-black w-full h-10 text-white flex justify-end px-2">
+        <nav class="gap-x-8 bg-black w-full h-10 text-white flex justify-end px-2">
             <a href="#">Accueil</a>
             <a href="#">Blog</a>
             <a href="#">Contact</a>
         </nav>
-        <div class="flex justify-center">
-            <h1 class="text-3xl font-bold underline text-gray-800">Contact support</h1>
-        </div>
-
     </header>
 
     <main class="flex justify-center">
 
-        <form class="border-double border-4 border-gray-900 p-5" action="" method="post" enctype="multipart/form-data">
+        <form class="shadow-md shadow-gray-500 rounded-lg bg-gray-200 w-2/6 p-8 mb-24" action="" method="post" enctype="multipart/form-data">
+            <div class="flex justify-center">
+                <h1 class="text-3xl font-bold text-gray-700">CONTACT SUPPORT</h1>
+            </div>
             <div>
-                <label for="name">Name:</label>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name:</label>
             </div>
 
             <div>
-                <input type="text" name="name" id="nameInput" placeholder="Name" required>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="name" id="nameInput" placeholder="Name" required>
             </div>
 
-            <div>
-                <label for="firstname">Firstname:</label>
+            <div class='mt-4'>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="firstname">Firstname:</label>
             </div>
             <div>
-                <input type="text" id="firstnameInput" name="firstname" placeholder="firstname" required>
-            </div>
-
-            <div>
-                <label for="email">Email:</label>
-            </div>
-            <div>
-                <input type="email" id="emailInput" name="email" placeholder="email" required>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="firstnameInput" name="firstname" placeholder="Firstname" required>
             </div>
 
-
+            <div class='mt-4'>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email:</label>
+            </div>
             <div>
-                <!--défini la taille maximale des fichiers pouvant être téléchargés-->
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="email" id="emailInput" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="mt-4">
+
                 <input type="hidden" name="MAX_FILE_SIZE" value="2147483648" />
-                <input type="file" name="img_name" size=50 id="" accept="image/png, image/jpeg, image/gif" required>
+                <label for="img_name" class="block text-sm font-bold text-gray-700 mb-2">Choose a file:</label>
+                <div class="flex items-center">
+                    <label for="img_upload"class="flex items-center justify-center px-4 py-2 bg-gray-500 text-white rounded-md cursor-pointer hover:bg-gray-700 transition duration-300">Choose a file
+                        <input id="img_upload" type="file" name="img_name" accept="image/png, image/jpeg, image/gif" class="hidden" required>
+                    </label>
+                </div>
             </div>
 
-            <div>
-                <label for="description">Description</label>
+            <div class='mt-4'>
+                <label class="block text-gray-700 ext-smt font-bold mb-2" for="description">Description</label>
             </div>
             <div>
-                <input type="text" id="descriptionInput" placeholder="description" name="descri" required>
+                <textarea class="shadow appearance-none border rounded w-full pb-10 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="descriptionInput" placeholder="Description" name="descri" required></textarea>
             </div>
-            <div>
-                <img src="PHP/captcha.php">
-                <input type="text" name="captcha" required />
-                <button class="border border-4 border-gray-900 p-1" name="ok">Submit</button>
+            <div class="mt-4">
+                <img class='mb-4' src="PHP/captcha.php">
+                <input placeholder="Captcha" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="captcha" required />
+            </div>
+            <div class='flex justify-center mt-4'>
+                <button class="rounded text-white bg-green-500 hover:bg-green-700 font-bold py-2 px-4" name="ok">Submit</button>
             </div>
         </form>
     </main>
 </body>
+
+
 
 </html>
 
@@ -75,35 +82,35 @@
 
 include "PHP/connexion.php";
 
-    session_start();
+session_start();
 
-    if (isset($_POST["captcha"]) && isset($_POST["ok"])) {
+if (isset($_POST["captcha"]) && isset($_POST["ok"])) {
 
-        if ($_POST["captcha"] == $_SESSION['captcha']) {
+    if ($_POST["captcha"] == $_SESSION['captcha']) {
 
-            if ($_FILES['img_name']['error'] === UPLOAD_ERR_OK) {
+        if ($_FILES['img_name']['error'] === UPLOAD_ERR_OK) {
 
-                $tempFilePath = $_FILES['img_name']['tmp_name'];
+            $tempFilePath = $_FILES['img_name']['tmp_name'];
 
-                $imageData = file_get_contents($tempFilePath);
+            $imageData = file_get_contents($tempFilePath);
 
-                $name = isset($_POST["name"]) ? $_POST["name"] : null;
-                $firstname = isset($_POST['firstname']) ? $_POST['firstname'] : null;
-                $email = isset($_POST['email']) ? $_POST['email'] : null;
-                $img_name = $imageData;
-                $description = isset($_POST['descri']) ? $_POST['descri'] : null;
+            $name = isset($_POST["name"]) ? $_POST["name"] : null;
+            $firstname = isset($_POST['firstname']) ? $_POST['firstname'] : null;
+            $email = isset($_POST['email']) ? $_POST['email'] : null;
+            $img_name = $imageData;
+            $description = isset($_POST['descri']) ? $_POST['descri'] : null;
 
-                $req = $bdd->prepare("INSERT INTO contact_support(name,firstname,email,img_nom,description) VALUES(?,?,?,?,?)");
+            $req = $bdd->prepare("INSERT INTO contact_support(name,firstname,email,img_nom,description) VALUES(?,?,?,?,?)");
 
-                $req->execute(array($name, $firstname, $email, $img_name, $description));
+            $req->execute(array($name, $firstname, $email, $img_name, $description));
 
-                header("location:PHP/add.php");
-                exit();
-            } 
-        }else {
-            echo "<div class='flex justify-center'><p>captcha invalide !</p></div>";
+            header("location:PHP/add.php");
+            exit();
         }
-
+    } else {
+        echo "<div class='flex justify-center'><p>captcha invalide !</p></div>";
     }
+
+}
 
 ?>
