@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^1.9.6"
+  },
+  "dependencies": {
+    "emailable": "^3.0.4"
   }
 }
