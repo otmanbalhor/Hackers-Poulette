@@ -1,3 +1,46 @@
+<?php require('PHP/script.php')?>
+
+<?php
+
+include "PHP/connexion.php";
+
+session_start();
+
+if (isset($_POST["captcha"]) && isset($_POST["ok"])) {
+
+    if ($_POST["captcha"] == $_SESSION['captcha']) {
+
+        if ($_FILES['img_name']['error'] === UPLOAD_ERR_OK) {
+
+            $tempFilePath = $_FILES['img_name']['tmp_name'];
+
+            $imageData = file_get_contents($tempFilePath);
+
+            $name = isset($_POST["name"]) ? $_POST["name"] : null;
+            $firstname = isset($_POST['firstname']) ? $_POST['firstname'] : null;
+            $email = isset($_POST['email']) ? $_POST['email'] : null;
+            $img_name = $imageData;
+            $description = isset($_POST['descri']) ? $_POST['descri'] : null;
+
+            $req = $bdd->prepare("INSERT INTO contact_support(name,firstname,email,img_nom,description) VALUES(?,?,?,?,?)");
+
+            $req->execute(array($name, $firstname, $email, $img_name, $description));
+
+            $subject = 'Demande bien reçue !';
+            $msg = 'Bonjour'.$firstname.',nous avons bien reçu votre demande.<br> Bien à vous';
+
+            $response = sendMail($_POST['email'],$subject,$msg);
+            header("location:PHP/add.php");
+            exit();
+        }
+    } else {
+        echo "<div class='flex justify-center'><p>captcha invalide !</p></div>";
+    }
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,11 +54,15 @@
 
 <body class="font-sans bg-gray-100">
     <header class="mb-10 w-full flex-col">
-        <nav class="gap-x-8 bg-black w-full h-10 text-white flex justify-end px-2">
-            <a href="#">Accueil</a>
-            <a href="#">Blog</a>
-            <a href="#">Contact</a>
-        </nav>
+    <nav class="bg-blue-600 w-full">
+        <div class="pr-4 mx-auto w-full">
+            <div class="flex justify-end items-center py-4 gap-x-8">
+                <a href="http://localhost/Hackers-Poulette/index.php" class="text-white font-bold hover:text-gray-300">Home</a>
+                <a href="#" class="text-white font-bold hover:text-gray-300">Blog</a>
+                <a href="#" class="text-white font-bold hover:text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
     </header>
 
     <main class="flex justify-center">
@@ -70,6 +117,16 @@
             <div class='flex justify-center mt-4'>
                 <button class="rounded text-white bg-green-500 hover:bg-green-700 font-bold py-2 px-4" name="ok">Submit</button>
             </div>
+
+            <?php
+                if(@$response == "succes"){
+
+                
+            ?>
+            <p class="error"><?php echo @$response; ?></p>
+            <?php
+            }
+            ?>
         </form>
     </main>
 </body>
@@ -78,39 +135,3 @@
 
 </html>
 
-<?php
-
-include "PHP/connexion.php";
-
-session_start();
-
-if (isset($_POST["captcha"]) && isset($_POST["ok"])) {
-
-    if ($_POST["captcha"] == $_SESSION['captcha']) {
-
-        if ($_FILES['img_name']['error'] === UPLOAD_ERR_OK) {
-
-            $tempFilePath = $_FILES['img_name']['tmp_name'];
-
-            $imageData = file_get_contents($tempFilePath);
-
-            $name = isset($_POST["name"]) ? $_POST["name"] : null;
-            $firstname = isset($_POST['firstname']) ? $_POST['firstname'] : null;
-            $email = isset($_POST['email']) ? $_POST['email'] : null;
-            $img_name = $imageData;
-            $description = isset($_POST['descri']) ? $_POST['descri'] : null;
-
-            $req = $bdd->prepare("INSERT INTO contact_support(name,firstname,email,img_nom,description) VALUES(?,?,?,?,?)");
-
-            $req->execute(array($name, $firstname, $email, $img_name, $description));
-
-            header("location:PHP/add.php");
-            exit();
-        }
-    } else {
-        echo "<div class='flex justify-center'><p>captcha invalide !</p></div>";
-    }
-
-}
-
-?>
