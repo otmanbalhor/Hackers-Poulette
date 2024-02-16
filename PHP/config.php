@@ -9,7 +9,7 @@ define("PASSWORD","fpjw ecvo tbpz kqri");
 
 define("SEND_FROM","otbalgaming@gmail.com");
 
-define("SEND_FROM_NAME","hackers-poulette");
+define("SEND_FROM_NAME","Hackeur Poulette");
 
 define("REPLY_TO","otbalgaming@gmail.com");
 
