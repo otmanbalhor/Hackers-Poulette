@@ -58,7 +58,7 @@
             </div>
 
             <?php
-            $rowColor = "bg-gray-100";
+            $rowColor = "bg-gray-100"; // Commentaire
             while ($response = $requete->fetch()) {
                 echo "<tr class='$rowColor hover:bg-blue-200'>";
                 echo "<td class='px-6 py-3 whitespace-nowrap'>" . $response['name'] . "</td>";
