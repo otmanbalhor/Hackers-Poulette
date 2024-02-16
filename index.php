@@ -26,8 +26,8 @@ if (isset($_POST["captcha"]) && isset($_POST["ok"])) {
 
             $req->execute(array($name, $firstname, $email, $img_name, $description));
 
-            $subject = 'Demande bien reçue !';
-            $msg = 'Bonjour'.$firstname.',nous avons bien reçu votre demande.<br> Bien à vous';
+            $subject = 'Confirmation de votre demande';
+            $msg = 'Bonjour'.$firstname.' ,nous traiterons votre demande très rapidement.<br> Bien à vous.';
 
             $response = sendMail($_POST['email'],$subject,$msg);
             header("location:PHP/add.php");
@@ -60,6 +60,7 @@ if (isset($_POST["captcha"]) && isset($_POST["ok"])) {
                 <a href="http://localhost/Hackers-Poulette/index.php" class="text-white font-bold hover:text-gray-300">Home</a>
                 <a href="#" class="text-white font-bold hover:text-gray-300">Blog</a>
                 <a href="#" class="text-white font-bold hover:text-gray-300">Contact</a>
+                <a href="http://localhost/Hackers-Poulette/PHP/login.php" class="text-white font-bold hover:text-gray-300">Log In</a>
             </div>
         </div>
     </nav>
