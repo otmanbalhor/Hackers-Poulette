@@ -15,7 +15,6 @@
                 <div class="flex justify-end items-center py-4 gap-x-8">
                     <a href="http://localhost/Hackers-Poulette/index.php"
                         class="text-white font-bold hover:text-gray-300">Home</a>
-                    <a href="#" class="text-white font-bold hover:text-gray-300">Log Out</a>
                 </div>
             </div>
         </nav>

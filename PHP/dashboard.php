@@ -17,7 +17,7 @@
             <div class="pr-4 mx-auto">
                 <div class="flex justify-end items-center py-4 gap-x-8">
                     <a href="http://localhost/Hackers-Poulette/index.php" class="text-white font-bold hover:text-gray-300">Home</a>
-                    <a href="http://localhost/Hackers-Poulette/PHP/login.php" class="text-white font-bold hover:text-gray-300">Log In</a>
+                    <a href="http://localhost/Hackers-Poulette/PHP/logout.php" class="text-white font-bold hover:text-gray-300">Log Out</a>
                 </div>
             </div>
         </nav>
@@ -75,7 +75,6 @@
 
             </tbody>
             </table>
-            <button class='mt-4 text-m rounded text-white bg-blue-600 hover:bg-blue-500 font-bold py-2 px-4 justify-center block mx-auto'>Log out</button>
         </div>
     </div>
     </div>

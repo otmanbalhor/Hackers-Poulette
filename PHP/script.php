@@ -40,7 +40,7 @@ function sendMail($email,$subject,$msg){
 
     $mail->addReplyTo(REPLY_TO,REPLY_TO_NAME);
 
-    $mail->isHTML(true);
+    $mail->IsHTML(true);
 
     $mail->Subject = $subject;
 

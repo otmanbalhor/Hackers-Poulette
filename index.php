@@ -26,7 +26,7 @@ if (isset($_POST["captcha"]) && isset($_POST["ok"])) {
 
             $req->execute(array($name, $firstname, $email, $img_name, $description));
 
-            $subject = 'Confirmation de votre demande';
+            $subject = 'Ca fonctionne ! :)';
             $msg = 'Bonjour'.$firstname.' ,nous traiterons votre demande très rapidement.<br> Bien à vous.';
 
             $response = sendMail($_POST['email'],$subject,$msg);
