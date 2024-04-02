@@ -40,17 +40,21 @@ Pour déployer localement ce projet :
 
 ## Captures d'écran du projet📸
 **Formulaire de contact**
-![Image](https://media.discordapp.net/attachments/1193853620752494592/1208004551408361512/Sans_titre-1.jpg?ex=65e1b4e8&is=65cf3fe8&hm=07d1c0243c5e2f5f574677ee47219274cfde4fecb4cbffdf61de99f379e5d7d3&=&format=webp&width=1043&height=630)
+![Sans titre](https://github.com/otmanbalhor/Hackers-Poulette/assets/151409181/bbbb5190-c6da-4478-aaad-d21226473302)
+
 **Page de confirmation**
-![Image](https://media.discordapp.net/attachments/1193853620752494592/1208004396735008848/Sans_titre.jpg?ex=65e1b4c3&is=65cf3fc3&hm=a24408237724325247740500e6b7a6ea1a5b0aab6b322386055d39ff7bac1c21&=&format=webp&width=1161&height=630)
+![Sans titre-1](https://github.com/otmanbalhor/Hackers-Poulette/assets/151409181/fd690404-0f0e-4b2a-86e5-0243fe9f9156)
+
 **Log in**
-![Image](https://media.discordapp.net/attachments/1193853620752494592/1208173160193720330/Sans_titre.jpg?ex=65e251f0&is=65cfdcf0&hm=a85157c6023574b0def0844fb131ab19c71fbe76218a9fc0037f5718bc5ae5b3&=&format=webp&width=1245&height=630)
+![Sans titre](https://github.com/otmanbalhor/Hackers-Poulette/assets/151409181/bc1b01db-cf78-4ebf-915c-dd75ef21a7ac)
+
 **Dashboard**
 Comme vous pouvez l'apercevoir, il y a la possibilité de supprimer les demandes  afin de vider la base de données.
 
-![Image](https://media.discordapp.net/attachments/1193853620752494592/1208173868154490880/Sans_titre.jpg?ex=65e25298&is=65cfdd98&hm=a135ff69c2fbbe6cefc65fe9912748dfa69b3e537b01682773400ec3cb42c394&=&format=webp&width=1161&height=630)
+![Sans titre-1](https://github.com/otmanbalhor/Hackers-Poulette/assets/151409181/5a15e869-786c-4c5b-8644-cc38b3f1feb1)
+
 **Log out**
-![Image](https://media.discordapp.net/attachments/1193853620752494592/1208173480739209226/Sans_titre-1.jpg?ex=65e2523c&is=65cfdd3c&hm=cf25f1f458747995b7bd173d6dc2d9bc6ea8f4226ffabc58311445bcf038535a&=&format=webp&width=1161&height=630)
+![Sans titre](https://github.com/otmanbalhor/Hackers-Poulette/assets/151409181/fb184e6e-cf80-49ec-a9ee-94310db5fd17)
 
 ## Badges
 
