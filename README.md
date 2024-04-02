@@ -38,7 +38,7 @@ Pour déployer localement ce projet :
 2. Créez et configurez la base de données dans le fichier `connexion.php`.
 3. Déployez l'application sur votre hébergement PHP.
 
-## Captures d'écran du projet📸
+## Images du projet 📸
 **Formulaire de contact**
 ![Sans titre](https://github.com/otmanbalhor/Hackers-Poulette/assets/151409181/bbbb5190-c6da-4478-aaad-d21226473302)
 
@@ -56,7 +56,7 @@ Comme vous pouvez l'apercevoir, il y a la possibilité de supprimer les demandes
 **Log out**
 ![Sans titre](https://github.com/otmanbalhor/Hackers-Poulette/assets/151409181/fb184e6e-cf80-49ec-a9ee-94310db5fd17)
 
-## Badges
+## Badges 🏷️
 
 [![PHP](https://camo.githubusercontent.com/81521ffdf464b6ccf96d80afb03d73edac19d56d28ee212174d802bbf47ad146/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5048502d3737374242343f7374796c653d666f722d7468652d6261646765266c6f676f3d706870266c6f676f436f6c6f723d7768697465)](https://camo.githubusercontent.com/81521ffdf464b6ccf96d80afb03d73edac19d56d28ee212174d802bbf47ad146/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5048502d3737374242343f7374796c653d666f722d7468652d6261646765266c6f676f3d706870266c6f676f436f6c6f723d7768697465)    [![html](https://camo.githubusercontent.com/c5cb1e7fe846c0859ef14b92c3ded6d512e081d732986922a456c57d60e6cbf7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f48544d4c2d3233393132303f7374796c653d666f722d7468652d6261646765266c6f676f3d68746d6c35266c6f676f436f6c6f723d7768697465)](https://camo.githubusercontent.com/c5cb1e7fe846c0859ef14b92c3ded6d512e081d732986922a456c57d60e6cbf7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f48544d4c2d3233393132303f7374796c653d666f722d7468652d6261646765266c6f676f3d68746d6c35266c6f676f436f6c6f723d7768697465)  [![MYSQL](https://camo.githubusercontent.com/c1c08eb7625abe1a813e5ad05a94891aa127a37e0ce126b59ecda28233effdac/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d7953514c2d3030303030463f7374796c653d666f722d7468652d6261646765266c6f676f3d6d7973716c266c6f676f436f6c6f723d7768697465)](https://camo.githubusercontent.com/c1c08eb7625abe1a813e5ad05a94891aa127a37e0ce126b59ecda28233effdac/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d7953514c2d3030303030463f7374796c653d666f722d7468652d6261646765266c6f676f3d6d7973716c266c6f676f436f6c6f723d7768697465)
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--X1_tTziN--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://img.shields.io/badge/Tailwind_CSS-38B2AC%3Fstyle%3Dfor-the-badge%26logo%3Dtailwind-css%26logoColor%3Dwhite)
